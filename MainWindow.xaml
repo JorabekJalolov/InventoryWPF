@@ -1,0 +1,55 @@
+﻿<Window x:Class="InventoryWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryWPF"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2.5*"/>
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="20 0 0 20">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="DarkCyan" Offset="0"/>
+                    <GradientStop Color="PaleTurquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Canvas>
+                    <Polygon Points="0,20 230,140 0,270" Fill="#4EB1B6"/>
+                    <Polygon Points="100,400 200,370 180,470" Fill="#4EB1B6"/>
+                    <Ellipse Margin="135 250 0 0" Width="50" Height="50" Fill="#4EB1B6"/>
+                    <Ellipse Margin="50 400 0 0" Width="30" Height="30" Fill="#4EB1B6"/>
+                </Canvas>
+                <StackPanel>
+                    <TextBlock Text="Category" Style="{StaticResource cate}"/>
+                    <Button Content="Kampetur" Style="{StaticResource button}" Click="Button_Click_1"/>
+                    <Button Content="Manetor" Style="{StaticResource button}" Click="Button_Click_2"/>
+                    <Button Content="Proektr" Style="{StaticResource button}" Click="Button_Click_3"/>
+                    <Button Content="Prentr" Style="{StaticResource button}" Click="Button_Click_4"/>
+                    <Button Content="Uyali Telifon" Style="{StaticResource button}" Click="Button_Click_5"/>
+                    <Button Content="Router" Style="{StaticResource button}"/>
+                    <Button Content="Admin" Click="Button_Click" Style="{StaticResource button}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0 20 20 0" >
+            <StackPanel>
+                <TextBlock  Text="DataGrid" Style="{StaticResource cate}" Foreground="#3AB19B"/>
+                <DataGrid x:Name="DataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding ItemData}" Margin="15">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" MinWidth="20" FontSize="12" Width="40"/>
+                        <DataGridTextColumn  Header="Model" Binding="{Binding Model}" MinWidth="150" FontSize="12" Width="110" />
+                        <DataGridTextColumn Header="Room" Binding="{Binding Room}" MinWidth="100" FontSize="12" Width="*" />
+                        <DataGridTextColumn Header="Responsible" Binding="{Binding Responsible}" MinWidth="150" FontSize="12" Width="40" />
+                        <DataGridTextColumn Header="MoreInformation" Binding="{Binding MoreInformation}" MinWidth="150" FontSize="12" Width="40" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
