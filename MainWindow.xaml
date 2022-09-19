@@ -26,28 +26,42 @@
                     <Ellipse Margin="50 400 0 0" Width="30" Height="30" Fill="#4EB1B6"/>
                 </Canvas>
                 <StackPanel>
-                    <TextBlock Text="Category" Style="{StaticResource cate}"/>
+                    <TextBlock FontSize="16" Margin="20 40" Text="Category" Style="{StaticResource cate}"/>
                     <Button Content="Kampetur" Style="{StaticResource button}" Click="Button_Click_1"/>
                     <Button Content="Manetor" Style="{StaticResource button}" Click="Button_Click_2"/>
                     <Button Content="Proektr" Style="{StaticResource button}" Click="Button_Click_3"/>
                     <Button Content="Prentr" Style="{StaticResource button}" Click="Button_Click_4"/>
                     <Button Content="Uyali Telifon" Style="{StaticResource button}" Click="Button_Click_5"/>
                     <Button Content="Router" Style="{StaticResource button}"/>
-                    <Button Content="Admin" Click="Button_Click" Style="{StaticResource button}"/>
+                    <Button Content="Mono" Click="Button_Click" Style="{StaticResource button}"/>
                 </StackPanel>
             </Grid>
         </Border>
         <Border Background="#ffffff" Grid.Column="1" CornerRadius="0 20 20 0" >
             <StackPanel>
-                <TextBlock  Text="DataGrid" Style="{StaticResource cate}" Foreground="#3AB19B"/>
-                <DataGrid x:Name="DataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding ItemData}" Margin="15">
-                    <DataGrid.Columns>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="220 20 0 0" VerticalAlignment="Center"  Text="DataGrid" Style="{StaticResource cate}" Foreground="#3AB19B" HorizontalAlignment="Center"/>                   
+                        <Button Click="Button_Click_6" Style="{StaticResource ButtonAdd}" Width="155" VerticalContentAlignment="Bottom" Height="50" Margin="95 20 0 0">
+
+                            <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/icons8-plus-64.png" Height="25" Margin="0 -5 0 0"/>
+                            <TextBlock Text="AddProduct" Margin="10 -2 0 0"/>                            
+                        </StackPanel>                        
+                        </Button>
+                </StackPanel>
+                <DataGrid x:Name="DataGrid1"  ItemsSource="{Binding ItemData}" Margin="15">
+                    <!--<DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" MinWidth="20" FontSize="12" Width="40"/>
                         <DataGridTextColumn  Header="Model" Binding="{Binding Model}" MinWidth="150" FontSize="12" Width="110" />
                         <DataGridTextColumn Header="Room" Binding="{Binding Room}" MinWidth="100" FontSize="12" Width="*" />
                         <DataGridTextColumn Header="Responsible" Binding="{Binding Responsible}" MinWidth="150" FontSize="12" Width="40" />
                         <DataGridTextColumn Header="MoreInformation" Binding="{Binding MoreInformation}" MinWidth="150" FontSize="12" Width="40" />
-                    </DataGrid.Columns>
+                    </DataGrid.Columns>-->
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridRow">
+                            <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
+                        </Style>
+                    </DataGrid.Resources>
                 </DataGrid>
             </StackPanel>
         </Border>

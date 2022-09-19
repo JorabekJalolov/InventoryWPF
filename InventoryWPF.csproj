@@ -173,8 +173,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Admin.xaml.cs">
-      <DependentUpon>Admin.xaml</DependentUpon>
+    <Compile Include="CreateProduct.xaml.cs">
+      <DependentUpon>CreateProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Migrations\20220914100856_InitialCreate.cs" />
     <Compile Include="Migrations\20220914100856_InitialCreate.designer.cs">
@@ -182,7 +188,15 @@
     </Compile>
     <Compile Include="Migrations\MyDbContextModelSnapshot.cs" />
     <Compile Include="Services\services.cs" />
-    <Page Include="Admin.xaml">
+    <Page Include="CreateProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Edit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,6 +251,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\icons8-imac-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icons8-plus-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

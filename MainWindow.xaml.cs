@@ -31,16 +31,16 @@ namespace InventoryWPF
         {
             using (MyDbContext db = new MyDbContext())
             {
-                var data = (from p in db.Products
+                List<Product> data = (from p in db.Products
                             join c in db.Categories
                             on p.CategoryId equals c.Id
                             where p.CategoryId == id
                             select p).ToList();
-                foreach (var item in data)
-                {
-                    DataGrid1.Items.Add(item);
-                }
-
+                //foreach (var item in data)
+                //{
+                //    DataGrid1.Items.Add(item);
+                //}
+                DataGrid1.ItemsSource = data;
             }
 
         }
@@ -54,39 +54,51 @@ namespace InventoryWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DataGrid1.Items.Clear();
             GetAll(1);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            DataGrid1.Items.Clear();
             GetAll(2);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            DataGrid1.Items.Clear();
             GetAll(3);
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            DataGrid1.Items.Clear();
             GetAll(5);
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            DataGrid1.Items.Clear();
             GetAll(4);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Admin admin = new Admin();
-            this.Visibility = Visibility.Hidden;
-            admin.Show();
+            GetAll(6);
         }
+
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                var row = e.Source as DataGridRow;
+                Details details = new Details(row.Item);
+                details.Owner = this;
+                details.Show();
+
+            }
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            CreateProduct modalWindow = new CreateProduct();
+              modalWindow.ShowDialog();
+        }
+        
     }
 }

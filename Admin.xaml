@@ -5,92 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InventoryWPF"
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-        Title="Admin" Height="500" Width="1000">
+        Title="Admin" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <Border Style="{DynamicResource BorderStyle1}" CornerRadius="20 0 0 20">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            <StackPanel>
-                <TextBlock Text="Create Product" Style="{StaticResource cate}" Foreground="#acb0af" FontSize="18" FontStyle="Italic" TextDecorations="Underline"/>
-                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
-                    <Grid Margin="7 9">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="/Images/icons8-imac-50.png" Height="20"/>
-                        <TextBlock Text="Model" MouseDown="textModel_MouseDown" x:Name="textModel" Style="{StaticResource TextB}" Grid.Column="1" Margin="8,4,2,-4" FontStyle="Italic"/>
-                        <TextBox x:Name="txtModel" TextChanged="txtModel_TextChanged" Style="{StaticResource TxtB}"/>
-                    </Grid>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
-                    <Grid Margin="7 9">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="/Images/icons8-imac-50.png" Height="20"/>
-                        <TextBlock Text="Room" MouseDown="textRoom_MouseDown" x:Name="textRoom" Style="{StaticResource TextB}" Grid.Column="1" Margin="8,4,2,-4" FontStyle="Italic"/>
-                        <TextBox x:Name="txtRoom" TextChanged="txtRoom_TextChanged" Style="{StaticResource TxtB}"/>
-                    </Grid>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
-                    <Grid Margin="7 9">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="/Images/icons8-imac-50.png" Height="20"/>
-                        <TextBlock Text="Responsible" MouseDown="textResponsible_MouseDown" x:Name="textResponsible" Style="{StaticResource TextB}" Grid.Column="1" Margin="8,4,2,-4" FontStyle="Italic" FontSize="14"/>
-                        <TextBox x:Name="txtResponsible" TextChanged="txtResponsible_TextChanged" Style="{StaticResource TxtB}"/>
-                    </Grid>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
-                    <Grid Margin="7 9">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="/Images/icons8-imac-50.png" Height="20"/>
-                        <TextBlock  Text="MoreInformation" MouseDown="textMoreInformation_MouseDown" x:Name="textMoreInformation" Style="{StaticResource TextB}" Grid.Column="1" Margin="8,4,2,-4" FontWeight="Normal" TextDecorations="{x:Null}" FontStyle="Italic"/>                       
-                        <TextBox VerticalAlignment="Center" x:Name="txtMoreInformation"  TextChanged="txtMoreInformation_TextChanged" Style="{StaticResource TxtB}"/>
-                    </Grid>
-                </Border>
-                <Border>
-                    <TextBox x:Name="txtProId" Visibility="Hidden"/>
-                </Border>
-                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
-                    <Grid Margin="7 9">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="/Images/icons8-imac-50.png" Height="20"/>
-                        <ComboBox Name="txtCategory" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" Foreground="Black" Style="{StaticResource TxtB}"/>
-                    </Grid>
-                </Border>
-                <Border HorizontalAlignment="Center">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Foreground="#acb0af" Content="Save" Background="PaleTurquoise" Click="Button_Click" Style="{StaticResource mainbutton}" Grid.ColumnSpan="2" Margin="46,20,200,0"/>
-                        <Button Foreground="#acb0af" Grid.Column="1" Background="PaleTurquoise" Content="Back" Click="Button_Click_1" Style="{StaticResource mainbutton}" Margin="198,20,46,0" Width="Auto"/>
-                    </Grid>
-                </Border>
-            </StackPanel>
-        </Border>
+     
         <!--2Qism-->
-        <Border Grid.Column="1" CornerRadius="0 20 20 0">
+        <Border Grid.Column="1" CornerRadius="20 20 20 20">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="DarkCyan" Offset="1"/>
@@ -98,18 +20,22 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel>
-                <TextBlock  Text="DataGrid" Style="{StaticResource cate}" Foreground="#acb0af" FontStyle="Italic" TextDecorations="Underline" FontSize="18"/>
+                <Border>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="DataGrid" Style="{StaticResource cate}" Foreground="#acb0af" FontStyle="Italic" TextDecorations="Underline" FontSize="18" Width="455" Height="34"/>
+                        <TextBox  x:Name="txtSearch" Background="PaleTurquoise"  VerticalContentAlignment="Center" Margin="20 10 0 0" Width="275" Height="26"/>
+                    </StackPanel>                   
+                </Border>               
                 <Border Margin="0 10 0 0">
                     <StackPanel Orientation="Horizontal">
                         <CheckBox x:Name="editCheck" Content="Edit" Style="{StaticResource Chexk}" Height="16" Checked="editCheck_Checked"/>
-                        <CheckBox x:Name="deleteCheck"  Content="Delete" Style="{StaticResource ResourceKey=Chexk}" RenderTransformOrigin="0.473,0.818" Height="17" Checked="deleteCheck_Checked" Width="69"/>
-                        <TextBox  x:Name="txtSearch" Background="PaleTurquoise"  VerticalContentAlignment="Center" Margin="20 0 0 0" Width="115" Height="27"/>
-                        <Button Content="Search" Name="Search" Style="{StaticResource EditBtn}" Width="65" Click="Search_Click" Height="37"/>
-                        <Button Content="Edit" Name="edit" Style="{StaticResource EditBtn}" Width="65" Click="edit_Click"/>
-                        <Button Content="Delete" Name="delete" Style="{StaticResource EditBtn}" Width="65" Click="delete_Click"/>
+                        <CheckBox x:Name="deleteCheck"  Content="Delete" Style="{StaticResource ResourceKey=Chexk}" RenderTransformOrigin="0.473,0.818" Height="17" Checked="deleteCheck_Checked" Width="69"/>                       
+                        <Button Content="Search" Name="Search" Style="{StaticResource EditBtn}" Width="170" Click="Search_Click" Height="37"/>
+                        <Button Content="Edit" Name="edit" Style="{StaticResource EditBtn}" Width="170" Click="edit_Click"/>
+                        <Button Content="Delete" Name="delete" Style="{StaticResource EditBtn}" Width="170" Click="delete_Click"/>
                     </StackPanel>
                 </Border>
-                <DataGrid HorizontalAlignment="Center" Foreground="#acb0af" Opacity="1.5" x:Name="DataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding ItemData}" Margin="15" Width="540" SelectionChanged="DataGrid1_SelectionChanged">
+                <!--<DataGrid HorizontalAlignment="Center" Foreground="#acb0af" Opacity="1.5" x:Name="DataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding ItemData}" Margin="15" Width="540" SelectionChanged="DataGrid1_SelectionChanged">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" MinWidth="20" FontSize="12" Width="40"/>
                         <DataGridTextColumn  Header="Model" Binding="{Binding Model}" MinWidth="150" FontSize="12" Width="120" />
@@ -117,7 +43,12 @@
                         <DataGridTextColumn Header="Responsible" Binding="{Binding Responsible}" MinWidth="150" FontSize="12" Width="40" />
                         <DataGridTextColumn Header="MoreInformation" Binding="{Binding MoreInformation}" MinWidth="150" FontSize="12" Width="40" />
                     </DataGrid.Columns>
-                </DataGrid>
+                </DataGrid>-->
+                <Border Margin="0 30 0 0">
+                    <DataGrid x:Name="MyGrid" Width="780">
+
+                    </DataGrid>
+                </Border>
             </StackPanel>
         </Border>
     </Grid>

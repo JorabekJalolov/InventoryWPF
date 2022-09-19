@@ -1,0 +1,39 @@
+﻿<Window x:Class="InventoryWPF.CreateProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryWPF"
+        mc:Ignorable="d" Background="Transparent" WindowStartupLocation="CenterScreen"  WindowStyle="None" AllowsTransparency="True"
+        Title="CreateProduct" Height="430" Width="650">
+   
+    <Grid>
+        <Border Background="DarkCyan" CornerRadius="20 20 20 20">
+            <Grid Margin="0,0,35,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel >
+                    <TextBlock Text="Model:" Margin="20" Foreground="#ffffff" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="Room:" Margin="20" Foreground="#ffffff" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="Responsible:" Margin="20" Foreground="#ffffff" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="MoreInformation:" Margin="20" Foreground="#ffffff" FontWeight="Bold" FontSize="16" Height="26"/>
+                    <TextBlock Text="Category:" Margin="20" Foreground="#ffffff" FontWeight="Bold" FontSize="16" Height="26"/>
+                </StackPanel>
+                <StackPanel  Grid.Column="1">
+                    <TextBox  x:Name="txtModel" Margin="15" Style="{StaticResource TextBoxStyle}" FontWeight="Normal" FontSize="16" Tag="Model" Width="400" />
+                    <TextBox  x:Name="txtRoom" Margin="15" Style="{StaticResource TextBoxStyle}" FontWeight="Normal" FontSize="16" Tag="Model" Width="400"/>
+                    <TextBox  x:Name="txtResponsible" Margin="15" Style="{StaticResource TextBoxStyle}" FontWeight="Normal" FontSize="16" Tag="Model" Width="400" Foreground="Black"/>
+                    <TextBox  x:Name="txtMoreInformation" Margin="15" Style="{StaticResource TextBoxStyle}" FontWeight="Normal" FontSize="16" Tag="Model" Width="400"/>
+                    <ComboBox Name="txtCategory" Margin="15 25" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" Width="400" FontWeight="Normal" FontSize="16" Style="{StaticResource TxtB}" Height="30"/>
+                    <TextBox x:Name="txtProId" Text="{Binding Id}" Visibility="Hidden"/>
+                    <StackPanel Orientation="Horizontal" Margin="20 -13" >
+                        <Button Content="SAVE" Style="{StaticResource BtnEdit}" Width="152" Click="Button_Click"/>
+                        <Button Content="BACK"  Style="{StaticResource BtnEdit}" Width="150" Click="Button_Click_1"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>        
+    </Grid>
+</Window>
