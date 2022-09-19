@@ -1,8 +1,18 @@
 # InventoryWPF
-![Снимок](https://user-images.githubusercontent.com/102501272/190681060-844dcb90-fd00-490c-add1-732ec2669999.PNG)
+![image](https://user-images.githubusercontent.com/102501272/190949354-48a95fd0-bb1f-44af-a229-5d4c8d812dc8.png)
 
 Category Bo'yicha Chiqarib beradi.
 
-![Снимок](https://user-images.githubusercontent.com/102501272/190681205-086ed2b7-b51f-4a6c-a413-03dc21e3bbdd.JPG)
+![image](https://user-images.githubusercontent.com/102501272/190949548-e171050d-e112-4038-a192-8ae4d91c0ead.png)
 
-Admin.
+Add Product.
+
+![image](https://user-images.githubusercontent.com/102501272/190949619-e148c935-7470-4d29-bcca-1b1237471779.png)
+
+Details and Delete And Edit.
+
+![image](https://user-images.githubusercontent.com/102501272/190949701-15b837ed-42d0-4980-a28a-b0e2150fb2fd.png)
+
+Update.
+
+
