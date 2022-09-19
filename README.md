@@ -1,5 +1,5 @@
 # InventoryWPF
-![image](https://user-images.githubusercontent.com/102501272/190949354-48a95fd0-bb1f-44af-a229-5d4c8d812dc8.png)
+![image](https://user-images.githubusercontent.com/102501272/190952656-8f8ae232-a1ab-433e-83ac-dfcdbf5cbb94.png)
 
 Category Bo'yicha Chiqarib beradi.
 
@@ -14,5 +14,9 @@ Details and Delete And Edit.
 ![image](https://user-images.githubusercontent.com/102501272/190949701-15b837ed-42d0-4980-a28a-b0e2150fb2fd.png)
 
 Update.
+
+![image](https://user-images.githubusercontent.com/102501272/190952704-21bc4bf1-da34-4988-b833-f1d1dc0036e5.png)
+
+Search.
 
 
